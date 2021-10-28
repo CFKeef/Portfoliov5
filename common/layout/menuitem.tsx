@@ -1,22 +1,24 @@
 import {ChakraProps} from "@chakra-ui/react";
 import Link from 'next/link';
-import {HigherOrderFC} from "../interfaces";
 import React from "react";
-import { Link as ChakraLink } from "@chakra-ui/react"
+import { Link as ChakraLink, Text } from "@chakra-ui/react"
 import {useRouter} from "next/router";
 
-interface Props extends HigherOrderFC {
+interface Props  {
     to: string;
-    styles?: ChakraProps
+    text: string;
+    styles?: ChakraProps;
+    children?: React.ReactNode;
 }
 
-const MenuItem: React.FunctionComponent<Props> = ({ children, to = "/", styles }) => {
+const MenuItem: React.FunctionComponent<Props> = ({ children,text, to = "/", styles }) => {
     const router = useRouter();
     const isActive = router.pathname === to;
 
     return (
         <Link href={to} passHref={true}>
-            <ChakraLink display="block" letterSpacing={"wide"} color={isActive ? "deeppink": "gray.300"} fontWeight={isActive ? "bold" : "normal"} {...styles}>
+            <ChakraLink display="block" {...styles}>
+                <Text as={"span"} fontSize={"md"} color={isActive ? "deeppink": "gray.300"} fontWeight={isActive ? "bold" : "normal"} letterSpacing={"wide"}>{text}</Text>
                 {children}
             </ChakraLink>
         </Link>

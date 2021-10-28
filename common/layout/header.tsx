@@ -1,8 +1,8 @@
 import {useState} from "react";
 import MenuToggle from "./menutoggle";
-import NavBarContainer from "./navbarcontainer";
 import MenuLinks from "./menulinks";
 import MobileMenu from "./mobilemenu";
+import {Collapse} from "@chakra-ui/react";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,13 +11,13 @@ const Header = () => {
 
     return (
         <>
-            <NavBarContainer>
-                {/* Desktop */}
-                <MenuLinks />
-                {/* Mobile */}
-                <MenuToggle toggle={toggle} isOpen={isOpen} />
-            </NavBarContainer>
-            {isOpen && <MobileMenu />}
+            {/* Desktop */}
+            <MenuLinks />
+            {/* Mobile */}
+            <MenuToggle toggle={toggle} isOpen={isOpen} />
+            <Collapse in={isOpen} animateOpacity>
+                <MobileMenu />
+            </Collapse>
         </>
     );
 };

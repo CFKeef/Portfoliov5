@@ -1,8 +1,9 @@
 import React from 'react';
-import {HigherOrderFC} from "./interfaces";
-import Header from "./layout/header";
+import {HigherOrderFC} from "../interfaces";
+import Header from "./header";
 import {Box} from "@chakra-ui/react";
 import Head from 'next/head'
+import Footer from "./footer";
 
 interface Props extends  HigherOrderFC {
     title?: string
@@ -21,6 +22,7 @@ const Layout: React.FunctionComponent<Props> = ({children, title = "Patryck's Po
                 <Box as="main" marginY={22}>
                     {children}
                 </Box>
+                <Footer />
             </Box>
         </Box>
     );

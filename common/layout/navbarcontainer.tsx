@@ -8,7 +8,6 @@ interface Props {
 const NavBarContainer:React.FunctionComponent<Props> = ({ children, ...props }) => {
     return (
         <Flex
-            as="nav"
             align="center"
             justify="space-between"
             wrap="wrap"

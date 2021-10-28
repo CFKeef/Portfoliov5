@@ -9,7 +9,7 @@ interface Props {
 
 const MenuToggle:React.FunctionComponent<Props> = ({ toggle, isOpen }) => {
     return (
-        <Box display={['flex', 'flex', 'none', 'none']} justifyContent={"flex-end"} width={"100%"}>
+        <Box mb={"1rem"} display={['flex', 'flex', 'none', 'none']} justifyContent={"flex-end"} width={"100%"}>
             <IconButton aria-label={"Open menu"} onClick={() => toggle(!isOpen)} icon={isOpen ? <CloseIcon /> : <HamburgerIcon /> } />
         </Box>
     )

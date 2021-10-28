@@ -1,20 +1,31 @@
-import {Stack} from "@chakra-ui/react";
+import {Button, Flex, Stack} from "@chakra-ui/react";
 import MenuItem from "./menuitem";
 
 const MenuLinks = () => {
     return (
         <Stack
+            as={"nav"}
             spacing={8}
             align="center"
-            justify={["center", "space-between", "flex-end", "flex-end"]}
-            direction={["column", "row", "row", "row"]}
+            justify={"space-between"}
+            direction={["row"]}
             pt={0}
             display={['none', 'none', 'flex','flex']}
-            alignItems={"center"}
-            justifyContent={"center"}
         >
-            <MenuItem to="/" >Home</MenuItem>
-            <MenuItem to="/visitors" >Visitor Log</MenuItem>
+            <Flex
+                w={"50%"}
+                spacing={8}
+                align="center"
+                justify={"space-between"}
+            >
+                <MenuItem to="/" text={"Home"} />
+                <MenuItem to="/projects" text={"Projects"} />
+                <MenuItem to="/articles" text={"Articles"} />
+                <MenuItem to="/visitors" text={"Visitors"} />
+            </Flex>
+            <Button
+               _hover={{bg: "deeppink", color: "white"}}
+            >Resume</Button>
         </Stack>
     )
 };

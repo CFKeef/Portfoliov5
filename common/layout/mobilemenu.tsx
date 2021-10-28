@@ -1,11 +1,11 @@
 import React from 'react';
-import {Box, Button} from "@chakra-ui/react";
+import {Box, Button } from "@chakra-ui/react";
 import MenuItem from "./menuitem";
 
 const Mobilemenu = () => {
    return <Box
          as={"ul"}
-         bg={"whiteAlpha.200"}
+         bg={"#191D3A"}
          borderRadius={"8"}
          p={"1rem"}
          display={"grid"}
@@ -16,7 +16,7 @@ const Mobilemenu = () => {
       <MenuItem to="/articles" text={"Articles"} />
       <MenuItem to="/visitors" text={"Visitors"} />
       <Button
-          _hover={{bg: "deeppink"}}
+          _hover={{bg: "deeppink", color: "white"}}
       >Resume</Button>
    </Box>
 };

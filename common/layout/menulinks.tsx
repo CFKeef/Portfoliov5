@@ -11,8 +11,10 @@ const MenuLinks = () => {
             direction={["row"]}
             pt={0}
             display={['none', 'none', 'flex','flex']}
+            m={["0", "1rem 0 0 0"]}
         >
             <Flex
+                m={"1rem 0 0 0"}
                 w={"50%"}
                 spacing={8}
                 align="center"

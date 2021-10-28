@@ -17,9 +17,16 @@ const Layout: React.FunctionComponent<Props> = ({children, title = "Patryck's Po
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <Box margin="8">
+            <Box
+                 m={["20px", "0"]}
+            >
                 <Header />
-                <Box as="main" marginY={22}>
+                <Box
+                     display={"flex"}
+                     justifyContent={"center"}
+                     flexDirection={"column"}
+                     alignItems={"center"}
+                >
                     {children}
                 </Box>
                 <Footer />

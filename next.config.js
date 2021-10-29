@@ -1,23 +1,13 @@
 module.exports = {
-    webpack(config) {
-        const { module = {} } = config;
-        return {
-            ...config,
-            module: {
-                ...module,
-                rules: [
-                    ...(module.rules || []),
-                    {
-                        test: /\.(pdf)$/,
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            publicPath: `/_next/static/files`,
-                            outputPath: "static/files",
-                        },
-                    },
-                ],
+    webpack(config, options) {
+        config.module.rules.push({
+            test: /\.(pdf)$/,
+            type: 'asset/resource',
+            generator: {
+                filename: 'static/chunks/[path][name].[hash][ext]'
             },
-        };
+        });
+
+        return config;
     },
 }

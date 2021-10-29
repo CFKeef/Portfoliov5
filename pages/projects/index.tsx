@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from "../../common/layout/layout";
+import {Text} from "@chakra-ui/react";
 
 const Index = () => {
     return (
         <Layout>
-            <p>hi</p>
+            <Text>Under Construction</Text>
         </Layout>
     )
 }

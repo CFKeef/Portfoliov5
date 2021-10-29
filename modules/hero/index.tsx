@@ -28,7 +28,7 @@ const Hero = () => {
         <Text as={"p"}>Currently looking for Early Careers/Junior positions in Software Engineering</Text>
 
         <Box m={"2rem 0"}>
-            <Text as={"span"} color={"deeppink"} fontSize={"1xl"}>Things to do while you're here!</Text>
+            <Text as={"span"} color={"deeppink"} fontSize={"2xl"} >Things to do while you're here!</Text>
             <List m={"1rem 0"} spacing={"1rem"}>
                 <ListElement>
                     <ListIcon as={IoMdBuild}/>
@@ -36,7 +36,7 @@ const Hero = () => {
                 </ListElement>
                 <ListElement>
                     <ListIcon as={FaBook}/>
-                    <Anchor to={"/articles"} text={"Check out my rantings"}><ArrowForwardIcon /></Anchor>
+                    <Anchor to={"/articles"} text={"Read through my rantings"}><ArrowForwardIcon /></Anchor>
                 </ListElement>
                 <ListElement>
                     <ListIcon as={BsFillPencilFill} />

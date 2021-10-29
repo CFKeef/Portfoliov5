@@ -30,7 +30,7 @@ const Index = () => {
   return (
       <Layout>
         <Hero />
-        <Heading w={"100%"} as={"h2"} textAlign={"left"} fontSize={"3xl"} m={"0rem 0 2rem 0"}>Some Things I've Built</Heading>
+        <Heading w={"100%"} as={"h2"} textAlign={"left"} fontSize={"3xl"} m={"0rem 0 2rem 0"}>Some Things I&apos;ve Built</Heading>
         <List
             as={"ul"}
             w={"100%"}

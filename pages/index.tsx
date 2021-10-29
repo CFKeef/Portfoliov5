@@ -12,14 +12,14 @@ import WasteLess from "../public/images/wasteless.svg";
 const ProjectListItem:React.FunctionComponent = ({children}) => {
     return (
         <ListItem
-            h={"20rem"}
+            h={["auto","20rem"]}
             w={"100%"}
             display={"grid"}
             gridTemplateColumns={["1fr","repeat(12,1fr)"]}
-            gridTemplateRows={"1fr"}
+            gridTemplateRows={["repeat(5,auto)","1fr"]}
             alignItems={"center"}
             pos={"relative"}
-            marginBottom={"5rem"}
+            marginBottom={["2rem","5rem"]}
         >
             {children}
         </ListItem>

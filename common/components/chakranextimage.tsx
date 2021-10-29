@@ -21,9 +21,25 @@ const ChakraNextImage = (props: ImageProps & BoxProps) => {
     return (
         <Box
             pos={"relative"}
+            h={"100%"}
             w={"100%"}
+            display={"inline-block"}
             {...rest}
         >
+            <Box
+                pos={"absolute"}
+                bg={"rgba(38,25,58,.7)"}
+                zIndex={2}
+                height={["100%", 330]}
+                width={["100%", 475]}
+                content={'""'}
+                top={0}
+                borderRadius={8}
+                transition={"all .2s"}
+                _hover={{
+                    bg: "none"
+                }}
+            />
                 <UnwrappedChakraImg
                     objectFit="cover"
                     layout="fill"

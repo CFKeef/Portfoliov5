@@ -20,21 +20,6 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
 
     return (
         <>
-            <Box
-                pos={"absolute"}
-                bg={"rgba(38,25,58,.7)"}
-                zIndex={2}
-                height={["100%", 330]}
-                width={["100%", 475]}
-                content={'""'}
-                top={0}
-                right={reverse ? -2 : "auto"}
-                borderRadius={8}
-                transition={"all .2s"}
-                _hover={{
-                    bg: "none"
-                }}
-            />
             <ChakraNextImage
                 src={image}
                 alt={imageAlt}
@@ -42,12 +27,16 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                 zIndex={1}
                 w={["auto", 475]}
                 h={["auto", 330]}
-                gridColumn={reverse  ? "6/-1" :"1 / 8"}
+                gridColumn={["",reverse  ? "6/-1" :"1 / 8"]}
                 gridRow={"1"}
                 display={"flex"}
                 justifyContent={"center"}
                 alignItems={"center"}
+                _after={{
+                    display:"none"
+                }}
             />
+
             <Box
                 h={"80%"}
                 zIndex={"3"}
@@ -56,7 +45,7 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                 gridRow={"1"}
                 gridTemplateRows={"repeat(4,1fr)"}
                 gridRowGap={"1rem"}
-
+                display={["none", "block"]}
             >
                 <Text
                     as={"span"}
@@ -115,6 +104,69 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                     }
                 </Flex>
             </Box>
+
+            <Box
+                display={["flex", "none"]}
+                flexDirection={"column"}
+            >
+                <Text
+                    as={"span"}
+                    display={"block"}
+                    color={"deeppink"}
+                    w={"100%"}
+                    m={".5rem 0"}
+                    textAlign={"left"}
+                >
+                    Featured Project
+                </Text>
+                <Heading
+                    as={"h4"}
+                    fontSize={"2xl"}
+                    w={"100%"}
+                    textAlign={"left"}
+                >
+                    {name}
+                </Heading>
+                <Box
+                    bg={"#191D3A"}
+                    borderRadius={8}
+                    padding={"1rem"}
+                    m={"1rem 0"}
+                >
+                    <Text as={"p"}
+                          textAlign={"center"}
+                          w={"100%"}
+                          fontSize={"sm"}
+                          color={"gray.200"}
+                    >{description}</Text>
+                </Box>
+                <Flex
+                    justify={"center"}
+                >
+                    <IconButton
+                        aria-label={"Github repo link"}
+                        icon={<ImGithub />}
+                        onClick={() => openLinkInNewTab(gitLink, window)}
+                        bg={"transparent"}
+                        _hover={{
+                            bg: "transparent",
+                            opacity: ".8"
+                        }}
+                    />
+                    {siteLink && <IconButton
+                        aria-label={"Site link"}
+                        icon={<FiExternalLink />}
+                        onClick={() => openLinkInNewTab(siteLink, window)}
+                        bg={"transparent"}
+                        _hover={{
+                            bg: "transparent",
+                            opacity: ".8"
+                        }}
+                    />
+                    }
+                </Flex>
+            </Box>
+
         </>
     )
 };

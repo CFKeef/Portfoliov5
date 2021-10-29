@@ -28,6 +28,7 @@ const MenuLinks = () => {
                 <MenuItem to="/visitors" text={"Visitors"} />
             </Flex>
             <Button
+                bg={"#191D3A"}
                _hover={{bg: "deeppink", color: "white"}}
                onClick={() => openLinkInNewTab(Resume, window)}
             >Resume</Button>

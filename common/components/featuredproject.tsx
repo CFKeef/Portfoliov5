@@ -85,20 +85,19 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                         aria-label={"Github repo link"}
                         icon={<ImGithub />}
                         onClick={() => openLinkInNewTab(gitLink, window)}
-                        bg={"transparent"}
+                        bg={"#191D3A"}
                         _hover={{
-                            bg: "transparent",
-                            opacity: ".8"
+                            bg: "deeppink"
                         }}
                     />
                     {siteLink && <IconButton
                         aria-label={"Site link"}
                         icon={<FiExternalLink />}
                         onClick={() => openLinkInNewTab(siteLink, window)}
-                        bg={"transparent"}
+                        ml={"1rem"}
+                        bg={"#191D3A"}
                         _hover={{
-                            bg: "transparent",
-                            opacity: ".8"
+                            bg: "deeppink"
                         }}
                     />
                     }
@@ -147,20 +146,19 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                         aria-label={"Github repo link"}
                         icon={<ImGithub />}
                         onClick={() => openLinkInNewTab(gitLink, window)}
-                        bg={"transparent"}
+                        bg={"#191D3A"}
                         _hover={{
-                            bg: "transparent",
-                            opacity: ".8"
+                            bg: "deeppink"
                         }}
                     />
                     {siteLink && <IconButton
                         aria-label={"Site link"}
                         icon={<FiExternalLink />}
                         onClick={() => openLinkInNewTab(siteLink, window)}
-                        bg={"transparent"}
+                        ml={"1rem"}
+                        bg={"#191D3A"}
                         _hover={{
-                            bg: "transparent",
-                            opacity: ".8"
+                            bg: "deeppink"
                         }}
                     />
                     }

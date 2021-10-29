@@ -23,6 +23,16 @@ const customTheme = extendTheme({
     fonts,
     colors,
     components: {
+        Button: {
+            baseStyle: {
+                bg:"#191D3A !important"
+            }
+        },
+        IconButton: {
+            baseStyle: {
+                bg:"#191D3A !important"
+            }
+        },
     },
 });
 

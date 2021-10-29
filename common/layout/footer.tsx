@@ -4,15 +4,24 @@ import {ImGithub, ImLinkedin} from "react-icons/im";
 
 const Footer = () => {
     return (
-        <Flex as="footer" width="100%" align="center" justify={"center"}  mb={"1rem"}>
-            <IconButton aria-label={"View github account"} icon={<ImGithub/>} bg={"#191D3A"}
-                        _hover={{
-                            bg: "deeppink"
-                        }}/>
-            <IconButton aria-label={"View linkedin account"} icon={<ImLinkedin />} ml={"1rem"} bg={"#191D3A"}
-                        _hover={{
-                            bg: "deeppink"
-                        }} />
+        <Flex as="footer" width="100%" align="center" justify={"center"}  mb={"1rem"}  borderTop={"1px solid deeppink"}>
+            <IconButton
+                aria-label={"View github account"}
+                icon={<ImGithub/>}
+                bg={"#191D3A"}
+                mt={"1rem"}
+                _hover={{
+                    bg: "deeppink"
+                }}/>
+            <IconButton
+                aria-label={"View linkedin account"}
+                icon={<ImLinkedin />}
+                ml={"1rem"}
+                bg={"#191D3A"}
+                mt={"1rem"}
+                _hover={{
+                    bg: "deeppink"
+                }} />
         </Flex>
     );
 };

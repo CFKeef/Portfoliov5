@@ -59,7 +59,7 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                 </Text>
                 <Heading
                     as={"h4"}
-                    fontSize={"2xl"}
+                    fontSize={"3xl"}
                     w={"100%"}
                     textAlign={reverse ? "left" :"right"}
                 >

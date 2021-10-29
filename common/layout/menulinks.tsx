@@ -1,5 +1,7 @@
 import {Button, Flex, Stack} from "@chakra-ui/react";
 import MenuItem from "./menuitem";
+import Resume from "../../public/GolebiewskiPatryckResume.pdf";
+import {openLinkInNewTab} from "../utils/functions";
 
 const MenuLinks = () => {
     return (
@@ -27,6 +29,7 @@ const MenuLinks = () => {
             </Flex>
             <Button
                _hover={{bg: "deeppink", color: "white"}}
+               onClick={() => openLinkInNewTab(Resume, window)}
             >Resume</Button>
         </Stack>
     )

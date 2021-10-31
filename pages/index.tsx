@@ -5,9 +5,9 @@ import {Heading, List, ListItem} from "@chakra-ui/react";
 import FeaturedProject from "../common/components/featuredproject";
 
 // Assets
-import Coursor from "/public/images/coursor.svg";
-import Expensie from "/public/images/expensie.svg"
-import WasteLess from "/public/images/wasteless.svg";
+import Coursor from "/public/images/coursor.png";
+import Expensie from "/public/images/expensie.png"
+import WasteLess from "/public/images/wasteless.png";
 
 const ProjectListItem:React.FunctionComponent = ({children}) => {
     return (

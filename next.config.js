@@ -5,10 +5,9 @@ module.exports = {
             type: 'asset/resource',
             generator: {
                 filename: 'static/chunks/[path][name].[hash][ext]',
-                basePath: "https://www.patryck.dev/"
+                publicPath: "https://www.patryck.dev/"
             },
-        });
-
+        })
         return config;
     },
 }

@@ -8,7 +8,7 @@ import {openLinkInNewTab} from "../utils/functions";
 interface Props {
     name: string;
     description: string;
-    image: StaticImageData;
+    image: string;
     imageAlt: string;
     gitLink: string;
     siteLink?: string;

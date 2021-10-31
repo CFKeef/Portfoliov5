@@ -35,6 +35,12 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                 _after={{
                     display:"none"
                 }}
+                opacity={["1",".5"]}
+                _hover={{
+                    opacity: "1"
+                }}
+                cursor={"pointer"}
+                to={siteLink ?? gitLink}
             />
 
             <Box

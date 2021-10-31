@@ -15,38 +15,26 @@ const UnwrappedChakraImg = chakra(NextImage, {
             "bg"
         ].includes(prop),
 })
-const ChakraNextImage = (props: ImageProps & BoxProps) => {
-    const { src, alt, width, quality, height,bg, ...rest } = props;
+const ChakraNextImage = (props: ImageProps & BoxProps & {to?: string}) => {
+    const { src, alt, width, quality, height,bg,to, ...rest } = props;
 
     return (
         <Box
+            as={"a"}
             pos={"relative"}
             h={"100%"}
             w={"100%"}
             display={"inline-block"}
+            href={to}
             {...rest}
         >
-            <Box
-                pos={"absolute"}
-                bg={"rgba(38,25,58,.7)"}
-                zIndex={2}
-                height={["100%", 330]}
-                width={["100%", 475]}
-                content={'""'}
-                top={0}
+            <UnwrappedChakraImg
+                objectFit="cover"
+                layout="fill"
+                src={src}
+                alt={alt}
                 borderRadius={8}
-                transition={"all .2s"}
-                _hover={{
-                    bg: "none"
-                }}
             />
-                <UnwrappedChakraImg
-                    objectFit="cover"
-                    layout="fill"
-                    src={src}
-                    alt={alt}
-                    borderRadius={8}
-                />
         </Box>
     )
 }

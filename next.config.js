@@ -4,7 +4,8 @@ module.exports = {
             test: /\.(pdf)$/,
             type: 'asset/resource',
             generator: {
-                filename: 'static/chunks/[path][name].[hash][ext]'
+                filename: 'static/chunks/[path][name].[hash][ext]',
+                basePath: "https://www.patryck.dev/"
             },
         });
 

@@ -1,9 +1,6 @@
 import React from 'react';
-import {Box, Flex, Heading, IconButton, Text} from "@chakra-ui/react";
+import {Box, Flex, Heading, Text, Link} from "@chakra-ui/react";
 import ChakraNextImage from "./chakranextimage";
-import {ImGithub} from "react-icons/im";
-import {FiExternalLink} from "react-icons/fi";
-import {openLinkInNewTab} from "../utils/functions";
 
 interface Props {
     name: string;
@@ -40,23 +37,24 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                     opacity: "1"
                 }}
                 cursor={"pointer"}
+                placeholder={"blur"}
                 to={siteLink ?? gitLink}
             />
 
             <Box
                 h={"80%"}
-                zIndex={"3"}
                 width={"100%"}
                 gridColumn={reverse ? "1 / 8" : "7/-1"}
                 gridRow={"1"}
                 gridTemplateRows={"repeat(4,1fr)"}
                 gridRowGap={"1rem"}
                 display={["none", "block"]}
+                zIndex={5}
             >
                 <Text
                     as={"span"}
                     display={"block"}
-                    color={"deeppink"}
+                    color={"neonPink"}
                     w={"100%"}
                     m={".5rem 0"}
                     textAlign={reverse ? "left" :"right"}
@@ -87,26 +85,13 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                 <Flex
                     justify={reverse ? "flex-start" : "flex-end"}
                 >
-                    <IconButton
-                        aria-label={"Github repo link"}
-                        icon={<ImGithub />}
-                        onClick={() => openLinkInNewTab(gitLink, window)}
-                        bg={"#191D3A"}
-                        _hover={{
-                            bg: "deeppink"
-                        }}
-                    />
-                    {siteLink && <IconButton
-                        aria-label={"Site link"}
-                        icon={<FiExternalLink />}
-                        onClick={() => openLinkInNewTab(siteLink, window)}
-                        ml={"1rem"}
-                        bg={"#191D3A"}
-                        _hover={{
-                            bg: "deeppink"
-                        }}
-                    />
-                    }
+                    <Flex
+                        justify={"center"}
+                    >
+                        <Link href={gitLink} target={"_blank"}>
+                            View Repo
+                        </Link>
+                    </Flex>
                 </Flex>
             </Box>
 
@@ -117,7 +102,7 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                 <Text
                     as={"span"}
                     display={"block"}
-                    color={"deeppink"}
+                    color={"neonPink"}
                     w={"100%"}
                     m={".5rem 0"}
                     textAlign={"left"}
@@ -145,29 +130,15 @@ const FeaturedProject:React.FunctionComponent<Props> = (props) => {
                           color={"gray.200"}
                     >{description}</Text>
                 </Box>
+                <Flex>
+
+                </Flex>
                 <Flex
                     justify={"center"}
                 >
-                    <IconButton
-                        aria-label={"Github repo link"}
-                        icon={<ImGithub />}
-                        onClick={() => openLinkInNewTab(gitLink, window)}
-                        bg={"#191D3A"}
-                        _hover={{
-                            bg: "deeppink"
-                        }}
-                    />
-                    {siteLink && <IconButton
-                        aria-label={"Site link"}
-                        icon={<FiExternalLink />}
-                        onClick={() => openLinkInNewTab(siteLink, window)}
-                        ml={"1rem"}
-                        bg={"#191D3A"}
-                        _hover={{
-                            bg: "deeppink"
-                        }}
-                    />
-                    }
+                    <Link href={gitLink} target={"_blank"}>
+                        View Repo
+                    </Link>
                 </Flex>
             </Box>
 

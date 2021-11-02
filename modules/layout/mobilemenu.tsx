@@ -16,7 +16,7 @@ const Mobilemenu = () => {
       <MenuItem to="/articles" text={"Articles"} />
       <MenuItem to="/visitors" text={"Visitors"} />
       <Button
-          _hover={{bg: "deeppink", color: "white"}}
+          _hover={{bg: "neonPink", color: "white"}}
       >Resume</Button>
    </Box>
 };

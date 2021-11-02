@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from "../common/layout/layout";
+import Layout from "../modules/layout/layout";
 import Hero from "../modules/hero";
 import {Heading, List, ListItem} from "@chakra-ui/react";
 import FeaturedProject from "../common/components/featuredproject";
@@ -67,8 +67,6 @@ const Index = () => {
                 />
             </ProjectListItem>
         </List>
-
-
       </Layout>
   )
 }

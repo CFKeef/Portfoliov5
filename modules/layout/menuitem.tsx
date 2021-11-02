@@ -18,7 +18,7 @@ const MenuItem: React.FunctionComponent<Props> = ({ children,text, to = "/", sty
     return (
         <Link href={to} passHref={true}>
             <ChakraLink display="block" {...styles}>
-                <Text as={"span"} fontSize={"md"} color={isActive ? "deeppink": "gray.200"} letterSpacing={"wide"}>{text}</Text>
+                <Text as={"span"} fontSize={"md"} color={isActive ? "neonPink": "gray.200"} letterSpacing={"wide"}>{text}</Text>
                 {children}
             </ChakraLink>
         </Link>

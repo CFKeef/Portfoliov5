@@ -5,7 +5,6 @@ module.exports = {
             type: 'asset/resource',
             generator: {
                 filename: 'static/chunks/[path][name].[hash][ext]',
-                publicPath: "https://www.patryck.dev/"
             },
         })
         return config;

@@ -24,6 +24,7 @@ const ChakraNextImage = (props: ImageProps & BoxProps & {to?: string}) => {
             pos={"relative"}
             h={"100%"}
             w={"100%"}
+            zIndex={"0"}
             display={"inline-block"}
             href={to}
             {...rest}

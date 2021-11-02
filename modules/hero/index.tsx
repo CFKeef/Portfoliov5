@@ -16,9 +16,9 @@ const ListElement:React.FunctionComponent = ({children}) => {
 
 const Hero = () => {
     return <Box as="main" m={["0", "4rem 0 0 0"]}>
-        <Text as={"span"} color={"deeppink"} fontSize={["2xl","3xl"]} >Hi, my name is</Text>
+        <Text as={"span"} color={"neonPink"} fontSize={["2xl","3xl"]} >Hi, my name is</Text>
         <Heading as={"h1"} fontSize={["4xl","5xl"]}>Patryck Golebiewski</Heading>
-        <Text as={"span"} color={"gray.300"} fontSize={["2xl","2xl"]}>I'm into building stuff for the web.</Text>
+        <Text as={"span"} color={"gray.300"} fontSize={["2xl","2xl"]}>I&apos;m into building stuff for the web.</Text>
 
         <Text fontSize={"md"} as={"p"} m={"2rem 0"}>My interest in the web comes from spending my childhood playing
             random MMOs and browsing the web. I love being able to contribute to it, I get satisfaction
@@ -28,7 +28,7 @@ const Hero = () => {
         <Text as={"p"}>Currently looking for Early Careers/Junior positions in Software Engineering</Text>
 
         <Box m={"2rem 0"}>
-            <Text as={"span"} color={"deeppink"} fontSize={"2xl"} >Things to do while you're here!</Text>
+            <Text as={"span"} color={"neonPink"} fontSize={"2xl"} >Things to do while you&apos;re here!</Text>
             <List m={"1rem 0"} spacing={"1rem"}>
                 <ListElement>
                     <ListIcon as={IoMdBuild}/>

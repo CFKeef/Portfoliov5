@@ -1,5 +1,5 @@
 import React from 'react';
-import {HigherOrderFC} from "../interfaces";
+import {HigherOrderFC} from "../../common/interfaces";
 import Header from "./header";
 import {Box} from "@chakra-ui/react";
 import Head from 'next/head'

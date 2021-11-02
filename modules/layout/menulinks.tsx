@@ -1,7 +1,6 @@
-import {Button, Flex, Stack} from "@chakra-ui/react";
+import {Flex, Stack} from "@chakra-ui/react";
 import MenuItem from "./menuitem";
 import Resume from "/public/GolebiewskiPatryckResume.pdf";
-import {openLinkInNewTab} from "../../common/utils/functions";
 
 const MenuLinks = () => {
     return (
@@ -16,7 +15,7 @@ const MenuLinks = () => {
             m={["0", "1rem 0 0 0"]}
         >
             <Flex
-                m={"1rem 0 0 0"}
+                m={"0"}
                 w={"50%"}
                 spacing={8}
                 align="center"
@@ -26,12 +25,8 @@ const MenuLinks = () => {
                 <MenuItem to="/projects" text={"Projects"} />
                 <MenuItem to="/articles" text={"Articles"} />
                 <MenuItem to="/visitors" text={"Visitors"} />
+                <MenuItem to={Resume} text={"Resume"} />
             </Flex>
-            <Button
-                bg={"#191D3A"}
-               _hover={{bg: "neonPink", color: "white"}}
-               onClick={() => openLinkInNewTab(Resume, window)}
-            >Resume</Button>
         </Stack>
     )
 };

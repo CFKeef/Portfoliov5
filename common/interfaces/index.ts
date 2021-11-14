@@ -1,123 +1,141 @@
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
 export interface HigherOrderFC {
-    children: ReactNode
+	children: ReactNode;
 }
 
-
 export interface githubResponse {
-    commits: number;
+	commits: number;
 }
 
 export type Proj = {
-    title: string;
-    desc: string;
-    tech: string[];
-    gitLink: string;
-    deployedLink: string;
-    current: boolean;
+	title: string;
+	desc: string;
+	tech: string[];
+	gitLink: string;
+	deployedLink: string;
+	current: boolean;
 };
 
 export interface GitHubContributor {
-    contributions: number;
+	contributions: number;
 }
 
 export interface GitHubRepo {
-    name: string;
+	name: string;
 }
 
 export interface Item {
-    metadata: Metadata;
-    sys: Sys;
-    fields: Fields;
+	metadata: Metadata;
+	sys: Sys;
+	fields: Fields;
 }
 
 export interface Fields {
-    title: string;
-    description: string;
-    tech: string[];
-    repoName: string;
-    repoLink: string;
-    deployedLink: string;
-    imageLink: string;
+	title: string;
+	description: string;
+	tech: string[];
+	repoName: string;
+	repoLink: string;
+	deployedLink: string;
+	imageLink: string;
 }
 interface Sys {
-    space: Space;
-    id: string;
-    type: string;
-    createdAt: string;
-    updatedAt: string;
-    environment: Space;
-    revision: number;
-    contentType: Space;
-    locale: string;
+	space: Space;
+	id: string;
+	type: string;
+	createdAt: string;
+	updatedAt: string;
+	environment: Space;
+	revision: number;
+	contentType: Space;
+	locale: string;
 }
 
 interface Space {
-    sys: any[];
+	sys: any[];
 }
 
 interface Metadata {
-    tags: any[];
+	tags: any[];
 }
 
 export interface Commit {
-    project: string;
-    message: string;
-    commitPosted: Date;
+	project: string;
+	message: string;
+	commitPosted: Date;
 }
 export interface CardData {
-    projects: Fields[];
-    commits: Commit[];
+	projects: Fields[];
+	commits: Commit[];
 }
 
 export namespace paginatedProjects {
-    export interface RootObject {
-        projects: Projects;
-        commits: Commits;
-    }
+	export interface RootObject {
+		projects: Projects;
+		commits: Commits;
+	}
 
-    interface Commits {
-        previousPage?: number | null;
-        nextPage: number;
-        total: number;
-        totalPages: number;
-        items: Commit[];
-    }
+	interface Commits {
+		previousPage?: number | null;
+		nextPage: number;
+		total: number;
+		totalPages: number;
+		items: Commit[];
+	}
 
-    interface Projects {
-        previousPage?: number | null;
-        nextPage: number;
-        total: number;
-        totalPages: number;
-        items: Fields[];
-    }
+	interface Projects {
+		previousPage?: number | null;
+		nextPage: number;
+		total: number;
+		totalPages: number;
+		items: Fields[];
+	}
 }
 
 export namespace projectFilters {
-    export interface RootObject {
-        filters: Filter[];
-    }
+	export interface RootObject {
+		filters: Filter[];
+	}
 
-    export interface Filter {
-        label: string;
-        value: string;
-    }
+	export interface Filter {
+		label: string;
+		value: string;
+	}
 }
 
 export namespace singleProject {
-    export interface RootObject {
-        project: Project;
-        commit: Commit;
-    }
+	export interface RootObject {
+		project: Project;
+		commit: Commit;
+	}
 
-    interface Commit {
-        project: string;
-        message: string;
-        commitPosted: Date;
-    }
+	interface Commit {
+		project: string;
+		message: string;
+		commitPosted: Date;
+	}
 
-    interface Project extends Fields {
-        order: number;
-    }
+	interface Project extends Fields {
+		order: number;
+	}
+}
+
+export namespace ProjectSpace {
+	export type Commit = {
+		Project: string;
+		message: string;
+		date_created: string;
+		url: string;
+	};
+
+	export type Project = {
+		title: string;
+		description: string;
+		tech: string[];
+		repoName: string;
+		repoLink: string;
+		deployedLink: string;
+		imageLink: string;
+	};
 }

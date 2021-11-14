@@ -20,11 +20,8 @@ const Index = () => {
 					for Front end. On the backend I&apos;ve worked with
 					Javascript, Java and currently working to learn Golang!
 				</Text>
-				1
+
 				<Box m={"2rem 0"}>
-					<Text as={"span"} color={"gray.300"} fontSize={"2xl"}>
-						List Controls
-					</Text>
 					<ProjectList />
 				</Box>
 			</Box>

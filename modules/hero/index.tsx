@@ -15,7 +15,7 @@ const ListElement:React.FunctionComponent = ({children}) => {
 };
 
 const Hero = () => {
-    return <Box as="main" m={["0", "4rem 0 0 0"]}>
+    return <Box as="main" m={["0", "1rem 0 0 0"]}>
         <Text as={"span"} color={"neonPink"} fontSize={["2xl","3xl"]} >Hi, my name is</Text>
         <Heading as={"h1"} fontSize={["4xl","5xl"]}>Patryck Golebiewski</Heading>
         <Text as={"span"} color={"gray.300"} fontSize={["2xl","2xl"]}>I&apos;m into building stuff for the web.</Text>

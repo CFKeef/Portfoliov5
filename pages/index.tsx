@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from "../modules/layout/layout";
 import Hero from "../modules/hero";
-import {Heading, List, ListItem} from "@chakra-ui/react";
+import {Heading, List, ListItem, Text, Box} from "@chakra-ui/react";
 import FeaturedProject from "../common/components/featuredproject";
 
 // Assets
@@ -67,6 +67,15 @@ const Index = () => {
                 />
             </ProjectListItem>
         </List>
+          <Heading w={"100%"} as={"h2"} textAlign={"left"} fontSize={"3xl"} m={"0rem 0 2rem 0"}>Some Things I&apos;ve Written</Heading>
+          <List
+              as={"ul"}
+              w={"100%"}
+          >
+              <Box>
+                  <Text>Stay tuned</Text>
+              </Box>
+          </List>
       </Layout>
   )
 }

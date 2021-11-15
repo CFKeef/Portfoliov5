@@ -46,17 +46,6 @@ export async function getStaticProps() {
 		.then((res) => res.json())
 		.catch((err) => console.log(err));
 
-	if (!res) {
-		return {
-			props: {
-				data: {
-					count: 0,
-					commits: [],
-					projects: [],
-				},
-			},
-		};
-	}
 	const projects = Object.values(res.projects);
 
 	return {

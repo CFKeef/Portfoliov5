@@ -35,7 +35,14 @@ const Index: FunctionComponent<Props> = ({ data }) => {
 };
 
 export async function getStaticProps() {
-	const res = await fetch("https://ceefgo.herokuapp.com/api/v1/projects")
+	const res = await fetch("https://ceefgo.herokuapp.com/api/v1/projects", {
+		method: "GET",
+		headers: {
+			"User-Agent":
+				"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
+			Accept: "application/json; charset=UTF-8",
+		},
+	})
 		.then((res) => res.json())
 		.catch((err) => console.log(err));
 

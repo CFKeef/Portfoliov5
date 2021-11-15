@@ -2,7 +2,6 @@ import { FunctionComponent } from "react";
 import Layout from "../../modules/layout/layout";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import ProjectList from "../../modules/projects/components/projectlist";
-import superagent from "superagent";
 import { Resp } from "../../common/interfaces";
 
 interface Props {
@@ -36,11 +35,9 @@ const Index: FunctionComponent<Props> = ({ data }) => {
 };
 
 export async function getStaticProps() {
-	const res = await superagent
-		.get(`https://ceefgo.herokuapp.com/api/v1/projects`)
-		.send()
-		.then((res) => res.body);
-
+	const res = await fetch(
+		"https://ceefgo.herokuapp.com/api/v1/projects"
+	).then((res) => res.json() as Promise<Resp>);
 	const projects = Object.values(res.projects);
 
 	return {

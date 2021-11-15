@@ -1,8 +1,7 @@
-import React from "react";
+import { FunctionComponent } from "react";
 import { Box, Grid } from "@chakra-ui/react";
 import ProjectCard from "./projectcard";
 import { Resp } from "../../../common/interfaces";
-import { FunctionComponent } from "hoist-non-react-statics/node_modules/@types/react";
 
 interface Props {
 	data: Resp;

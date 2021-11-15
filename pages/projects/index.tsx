@@ -35,9 +35,21 @@ const Index: FunctionComponent<Props> = ({ data }) => {
 };
 
 export async function getStaticProps() {
-	const res = await fetch(
-		"https://ceefgo.herokuapp.com/api/v1/projects"
-	).then((res) => res.json() as Promise<Resp>);
+	const res = await fetch("https://ceefgo.herokuapp.com/api/v1/projects")
+		.then((res) => res.json())
+		.catch((err) => console.log(err));
+
+	if (!res) {
+		return {
+			props: {
+				data: {
+					count: 0,
+					commits: [],
+					projects: [],
+				},
+			},
+		};
+	}
 	const projects = Object.values(res.projects);
 
 	return {

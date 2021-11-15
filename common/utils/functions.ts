@@ -43,14 +43,13 @@ export const fetchProjects = async (): Promise<CardData | null> => {
 };
 
 export const fetchPaginatedProjects =
-	async (): Promise<paginatedProjects.RootObject | null> => {
+	async (): Promise<paginatedProjects.RootObject> => {
 		return await superagent
 			.get(`https://ceefgo.herokuapp.com/api/v1/projects`)
 			.send()
 			.then((res) => res.body)
 			.catch((err) => {
 				console.error(err);
-				return null;
 			});
 	};
 

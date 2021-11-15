@@ -1,51 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { fetchPaginatedProjects } from "../../../common/utils/functions";
-import { Box, Grid, Spinner } from "@chakra-ui/react";
+import React from "react";
+import { Box, Grid } from "@chakra-ui/react";
 import ProjectCard from "./projectcard";
-import { ProjectSpace } from "../../../common/interfaces";
+import { Resp } from "../../../common/interfaces";
+import { FunctionComponent } from "hoist-non-react-statics/node_modules/@types/react";
 
-interface Resp {
-	commits: ProjectSpace.Commit[];
-	projects: ProjectSpace.Project[];
-	count: number;
+interface Props {
+	data: Resp;
 }
 
-const ProjectList = () => {
-	const [data, setData] = useState<Resp>();
-	const [isLoading, setIsLoading] = useState(true);
-
-	useEffect(() => {
-		const fetchProjects = async () => {
-			const res = await fetchPaginatedProjects();
-
-			if (res) {
-				const projects = Object.values(res.projects);
-				setData({
-					count: projects.length,
-					commits: Object.values(res.commits),
-					projects: projects,
-				});
-				setIsLoading(false);
-			}
-		};
-
-		fetchProjects();
-	}, []);
-
+const ProjectList: FunctionComponent<Props> = ({ data }) => {
 	const handleRender = () => {
-		if (isLoading)
-			return (
-				<React.Fragment>
-					<Spinner />
-				</React.Fragment>
-			);
-		else if (data) {
-			return generateProjectCards();
-		}
+		return generateProjectCards();
 	};
 
 	const generateProjectCards = () => {
-		return data?.projects?.map((project, index) => {
+		return data?.projects.map((project, index) => {
 			return (
 				<ProjectCard
 					key={project.repoName}

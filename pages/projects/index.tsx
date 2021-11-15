@@ -1,12 +1,18 @@
-import React from "react";
+import { FunctionComponent } from "react";
 import Layout from "../../modules/layout/layout";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import ProjectList from "../../modules/projects/components/projectlist";
+import superagent from "superagent";
+import { Resp } from "../../common/interfaces";
 
-const Index = () => {
+interface Props {
+	data: Resp;
+}
+
+const Index: FunctionComponent<Props> = ({ data }) => {
 	return (
 		<Layout>
-			<Box as="main" m={["0", "1rem 0 0 0"]} w={"100%"}>
+			<Box m={["0", "1rem 0 0 0"]} w={"100%"}>
 				<Heading
 					as={"h1"}
 					fontSize={["4xl", "5xl"]}
@@ -22,11 +28,31 @@ const Index = () => {
 				</Text>
 
 				<Box m={"2rem 0"}>
-					<ProjectList />
+					<ProjectList data={data} />
 				</Box>
 			</Box>
 		</Layout>
 	);
 };
+
+export async function getStaticProps() {
+	const res = await superagent
+		.get(`https://ceefgo.herokuapp.com/api/v1/projects`)
+		.send()
+		.then((res) => res.body);
+
+	const projects = Object.values(res.projects);
+
+	return {
+		props: {
+			data: {
+				count: projects.length,
+				commits: Object.values(res.commits),
+				projects: projects,
+			},
+		},
+		revalidate: 86400,
+	};
+}
 
 export default Index;

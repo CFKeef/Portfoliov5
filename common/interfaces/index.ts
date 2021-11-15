@@ -139,3 +139,9 @@ export namespace ProjectSpace {
 		imageLink: string;
 	};
 }
+
+export interface Resp {
+	commits: ProjectSpace.Commit[];
+	projects: ProjectSpace.Project[];
+	count: number;
+}

@@ -31,15 +31,22 @@ const ProjectCard: React.FunctionComponent<Props> = (props) => {
 				<Heading m={"0"} as={"h4"} fontSize={"2xl"} w={"100%"}>
 					{data.title}
 				</Heading>
-				<Box
-					display={"flex"}
-					justifyContent={"flex-end"}
-					alignItems={"center"}
-				>
-					<Link w={"100%"} to={data.repoLink} target={"_blank"}>
-						View Repo
-					</Link>
-				</Box>
+				{data.repoLink && (
+					<Box
+						display={"flex"}
+						justifyContent={"flex-end"}
+						alignItems={"center"}
+					>
+						<Link
+							w={"100%"}
+							href={data.repoLink}
+							isExternal
+							target={"_blank"}
+						>
+							View Repo
+						</Link>
+					</Box>
+				)}
 			</Box>
 
 			<Text

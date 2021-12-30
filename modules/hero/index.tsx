@@ -56,7 +56,7 @@ const Hero = () => {
 							<ArrowForwardIcon />
 						</Anchor>
 					</ListElement>
-					<ListElement>
+					{/* <ListElement>
 						<ListIcon as={FaBook} />
 						<Anchor
 							to={"/articles"}
@@ -64,8 +64,8 @@ const Hero = () => {
 						>
 							<ArrowForwardIcon />
 						</Anchor>
-					</ListElement>
-					<ListElement>
+					</ListElement> */}
+					{/* <ListElement>
 						<ListIcon as={BsFillPencilFill} />
 						<Anchor
 							to={"/visitors"}
@@ -73,7 +73,7 @@ const Hero = () => {
 						>
 							<ArrowForwardIcon />
 						</Anchor>
-					</ListElement>
+					</ListElement> */}
 				</List>
 			</Box>
 		</Box>

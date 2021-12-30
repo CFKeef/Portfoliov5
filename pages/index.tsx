@@ -78,7 +78,7 @@ const Index = () => {
 					/>
 				</ProjectListItem>
 			</List>
-			<Heading
+			{/* <Heading
 				w={"100%"}
 				as={"h2"}
 				textAlign={"left"}
@@ -88,10 +88,10 @@ const Index = () => {
 				Some Things I&apos;ve Written
 			</Heading>
 			<List as={"ul"} w={"100%"}>
-				<Box>
-					<Text>Stay tuned</Text>
+				<Box bg={"#191D3A"} borderRadius={8} m={"0"}>
+					<Text>Nothing Yet</Text>
 				</Box>
-			</List>
+			</List> */}
 		</Layout>
 	);
 };

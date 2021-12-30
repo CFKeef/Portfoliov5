@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {SectionSplitterText} from "../../../common/components";
+import { SectionSplitterText } from "../../../common/components";
 
 export const FooterContainer = styled.footer`
 	width: 100%;
@@ -12,6 +12,9 @@ export const FooterContainer = styled.footer`
 `;
 
 export const Column = styled.div`
+	@media (max-width: 30em) {
+		width: 25%;
+	}
 	width: 20%;
 	display: flex;
 	justify-content: space-evenly;
@@ -22,7 +25,7 @@ export const Column = styled.div`
 
 export const ColumnHeader = styled(SectionSplitterText)`
 	font-size: 1rem;
-  font-weight: normal;
+	font-weight: normal;
 `;
 
 export const ColumnEntry = styled.a`

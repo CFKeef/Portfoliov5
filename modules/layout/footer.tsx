@@ -21,9 +21,9 @@ const Footer = (): JSX.Element => {
 				<Link href={"/projects"} passHref={true}>
 					<ChakraLink as={ColumnEntry}>Projects</ChakraLink>
 				</Link>
-				<Link href={"/articles"} passHref={true}>
+				{/* <Link href={"/articles"} passHref={true}>
 					<ChakraLink as={ColumnEntry}>Articles</ChakraLink>
-				</Link>
+				</Link> */}
 			</Column>
 			<Column>
 				<ColumnHeader>Social</ColumnHeader>

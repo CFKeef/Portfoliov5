@@ -3,8 +3,7 @@ import { Box, Heading, List, ListItem, ListIcon, Text } from "@chakra-ui/react";
 import Anchor from "../../common/components/anchor";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { IoMdBuild } from "react-icons/io";
-import { FaBook } from "react-icons/fa";
-import { BsFillPencilFill } from "react-icons/bs";
+import { Link as ChakraLink } from "@chakra-ui/react";
 
 const ListElement: React.FunctionComponent = ({ children }) => {
 	return (
@@ -41,8 +40,13 @@ const Hero = () => {
 			</Text>
 
 			<Text as={"p"}>
-				Currently looking for Early Careers/Junior positions in Software
-				Engineering
+				Currently working as a Junior Full Stack Engineer at{" "}
+				<ChakraLink
+					href={"https://corp.scalacomputing.com/"}
+					target="_blank"
+				>
+					Scala Computing
+				</ChakraLink>
 			</Text>
 
 			<Box m={"2rem 0"}>

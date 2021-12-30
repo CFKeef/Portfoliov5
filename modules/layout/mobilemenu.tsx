@@ -15,7 +15,7 @@ const Mobilemenu = () => {
 		>
 			<MenuItem to="/" text={"Home"} />
 			<MenuItem to="/projects" text={"Projects"} />
-			<MenuItem to="/articles" text={"Articles"} />
+			{/* <MenuItem to="/articles" text={"Articles"} /> */}
 			{/* <MenuItem to="/visitors" text={"Visitors"} /> */}
 			<MenuItem to={Resume} text={"Resume"} />
 		</Box>

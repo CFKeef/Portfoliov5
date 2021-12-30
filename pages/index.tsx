@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../modules/layout/layout";
 import Hero from "../modules/hero";
-import { Heading, List, ListItem, Text, Box } from "@chakra-ui/react";
+import { Heading, List, ListItem } from "@chakra-ui/react";
 import FeaturedProject from "../common/components/featuredproject";
 
 // Assets
